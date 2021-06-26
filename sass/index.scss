@@ -1,0 +1,70 @@
+//변수
+@import "abstracts/var";
+
+//mixin
+@import "abstracts/mixins";
+
+
+//base
+@import "base/base";
+
+//nesting
+.box{
+
+    @include widthHeightPadidng(300px, 300px, 20px);
+    @include po-abs-center();
+
+
+    &, &-inner{
+        border:3px solid $border-color;
+
+    } 
+    //미디어 쿼리는 기본 정의 & 밑에 나와야한다.
+    @include mq('phone'){
+        //include 중괄호 안에 글을 써주면 @mixin의 @content 자리에 들어간다.
+        border:none;
+        width:100%;
+    }
+    @include mq('tablet-land'){
+        border:2px solid $border-color;
+    }
+    @include mq('desktop-big'){
+        width:600px;
+        padding:50px;
+        border:10px solid $border-color;
+    }
+
+   
+
+    // .box-inner
+    &-inner{
+
+        @include widthHeightPadidng(initial, 40px, 10px);
+       
+        background-color: $color-grey;
+
+        @include mq('phone'){
+            height:55px;
+        }
+
+        // .box-inner-title
+        &-title{
+            font-size: 20px;
+            color:$color-white;
+            background-color: rgba($color-black,0.4);
+
+            @include mq('phone'){
+                font-size:40px;
+            }
+            @include mq('tablet-land'){
+                font-size:30px;
+            }
+           
+        }
+
+    }
+}
+
+
+
+//미디어쿼리

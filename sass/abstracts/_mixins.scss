@@ -1,0 +1,49 @@
+@mixin widthHeightPadidng($width,$height,$padding) {
+    width:$width;
+    height:$height;
+    padding:$padding;
+}
+@mixin po-abs-center() {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+@mixin po-abs-center-horizontal() {
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+}
+@mixin po-abs-center-vertical() {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+
+//미디어 쿼리
+@mixin  mq($screen-width) {
+    @if $screen-width == 'phone'{
+        @media screen and (max-width:600px) {
+            @content; 
+            // @include 부분의 코드가 들어온다.
+        }
+    }
+    @else if $screen-width == 'tablet-land'{
+        @media screen and (min-width:601px) and (max-width:899px) {
+            @content;
+        }
+    }
+    @else if $screen-width == 'desktop-big'{
+        //phone
+        @media screen and (min-width:1201px){
+            @content;
+        }
+    }
+    @else{
+
+    }
+
+    
+}
