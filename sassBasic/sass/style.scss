@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+//변수
+
+//mixin
+// 속성은 같으나 값이 다를 때
+@mixin boxStyle($borderWidth,$borderStyle,$borderColor,$bgColor){
+    border-radius: 8px;
+    border:$borderWidth $borderStyle $borderColor;
+}
+@mixin fontSize1($fontSize) {
+    font-size:$fontSize;
+}
+//기본값 설정도 가능
+@mixin fontSize2($fontSize:12px){
+    font-size:$fontSize;
+}
+
+//extend
+// 같은 코드가 여러군데 쓰일 때
+%boxShape{
+    margin:20px 0;
+    padding:10px;
+    border-radius: 16px;;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 3px #ccc;
+}
+
+
+#box1{
+    @include boxStyle(5px,solid,#000,#ffcccc);
+    @include fontSize1(40px);
+    @extend %boxShape;
+}
+
+#box2{
+    @include boxStyle(1px,solid  ,#f00,#fff );
+    @include fontSize2(); 
+    @extend %boxShape;
+}
+
+#box3{
+    @extend %boxShape;
+}
+
+#box4{
+    @extend %boxShape;
+}

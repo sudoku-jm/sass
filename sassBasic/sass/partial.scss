@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+//다른 scss 가져와서 씀.
+// 다른 scss 가져와서 연결시 _ 언더바는 빼고 연결해준다.
+// .scss 확장명도 빼고 써줌
+@import "style/reset";
+@import "mixins";
+
+#test{
+    @include fontSizeBgColor(100px,#ccc);
+}
