@@ -1,0 +1,36 @@
+
+/* 
+    px 절대적인 크기
+    
+    상대적인 크기
+    em 해당 요소에 지정된 폰트 사이즈.
+    rem 최상위 html root에 지정된 폰트 사이즈. html폰트 사이즈만 바꾸기만 하면 되니 편하다. 
+
+    vw (viewport-width)
+    vh (viewport-height)
+*/
+
+html{
+    //기본 브라우저(데스크탑) 폰트 사이즈 : 16px
+    //font-size:10px; // 1rem
+    font-size:62.5%; // 10px = 1rem
+}
+#box1{
+    font-size:3rem;
+    /* 
+        1em = 30px;
+    */
+    // width:25em;
+    //width:25rem;
+
+    width:80vw; // 뷰포트 너비의 80%
+    height: 50vh; // 뷰포트 너비의 50%
+    background-color: #aaa;
+}
+
+#box2{
+    // width:25em;
+    width:25rem;
+    font-size:2rem;
+    background-color: #777;
+}

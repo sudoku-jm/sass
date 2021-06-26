@@ -1,0 +1,36 @@
+body{
+    margin:50px;
+}
+
+//
+@mixin textAndBgColor($textColor,$bgColor) {
+    color:$textColor;
+    background-color: $bgColor;
+}
+
+
+//if문 사용하기
+@mixin theme($mood) {
+    @if $mood == 'light'{
+        @include textAndBgColor(#000,#f5f5f5 );
+    }
+    @else if $mood == 'dark'{
+        @include textAndBgColor(#fff,#121212 );
+
+    }
+    @else{
+        @include textAndBgColor(#f00,#eee )
+    }
+}
+
+
+
+#box1{
+    @include theme('light');
+}
+#box2{
+    @include theme('dark');
+}
+#box3{
+    @include theme('none');
+}

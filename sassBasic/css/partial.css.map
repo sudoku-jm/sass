@@ -1,0 +1,11 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CAAA;EACG,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;CACZ;;ADKD,AAAA,KAAK,CAAA;EEJD,SAAS,EFKgB,KAAK;EEJ9B,gBAAgB,EFIe,IAAI;CACtC",
+    "sources": [
+        "../sass/partial.scss",
+        "../sass/style/reset.scss",
+        "../sass/_mixins.scss"
+    ],
+    "names": [],
+    "file": "partial.css"
+}

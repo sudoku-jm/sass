@@ -1,0 +1,35 @@
+
+
+.btn{
+    font-size:30px;
+    text-decoration: none;
+    transition: all .5s;
+
+    &:hover{
+        font-size:50px;
+        text-decoration: underline;
+        opacity: .2;
+    }
+}
+
+//Animation
+@keyframes anim1{
+    0%{
+        transform:translate(100px,-30px);
+        opacity: .2;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .1;
+    }
+}
+
+#box1{
+    animation-name:anim1;
+    animation-duration:5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 3;
+
+}

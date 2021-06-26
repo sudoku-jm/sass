@@ -1,0 +1,11 @@
+//scss 파일 명이 _로 시작하면 컴파일되지않는다.
+
+
+@mixin fontSizeBgColor($fontSize:20px,$bgColor:#fff) {
+    font-size:$fontSize;
+    background-color: $bgColor;
+}
+@mixin linkStyle($textColor,$textDeco:none) {
+    color:$textColor;
+    text-decoration: $textDeco;
+}
