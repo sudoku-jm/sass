@@ -1,6 +1,12 @@
 @import "base/base";
 @import "abstracts/var";
+@import "abstracts/mixins";
 
 @import "base/animations";
+@import "base/typo";
+@import "components/button";
+@import "base/util";
 
 @import "layout/header";
+@import "layout/main";
+@import "layout/footer";

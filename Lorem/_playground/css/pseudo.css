@@ -1,0 +1,41 @@
+#box {
+  background-color: #00f;
+  width: 300px;
+  height: 300px;
+  color: #fff;
+}
+
+#box::before {
+  content: 'before';
+  display: block;
+}
+
+#box::after {
+  content: 'after';
+  display: block;
+  background-color: #ff0;
+}
+
+.box-parent {
+  padding: 20px;
+  background-color: #00f;
+}
+
+.box-parent::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.box-parent .box-child {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: #f00;
+  border: 1px solid #ff0;
+}
+
+.box-parent .box-child:not(:last-child) {
+  margin-right: 40px;
+}
+/*# sourceMappingURL=pseudo.css.map */
