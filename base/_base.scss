@@ -1,0 +1,22 @@
+//google font : noto sans kr , lato
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Roboto:wght@400;700;900&display=swap');
+
+// google material icon font
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+//
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%; // 기본 브라우저 = 16px. 16px의 62.5%는 10px = 1rem.
+}
+
+body{
+    padding:3rem;
+    font-family: 'Roboto', sans-serif;
+}
+
